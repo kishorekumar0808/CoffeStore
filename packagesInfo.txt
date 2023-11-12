@@ -1,0 +1,19 @@
+Zustend: 
+    -- its a state management library, it will have data across the app, if we add or remove in cart 
+       the zustend will update the entire app were the modifications are done in cart
+    -- it is light waight and fast
+    -- very easy to use, and it is hook based
+
+Immer:
+    -- it is used to update store very deep level 
+    -- eg(deeply nested objects data)
+
+AsyncStorage:
+    -- it is used store the data locally on the device, and also same data which is used to update.
+
+Lottie:
+    -- To add the animation effects
+
+Vector Icons:
+    -- use to provide icons
+    npm i --save-dev @types/react-native-vector-icons
