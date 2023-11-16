@@ -1,1 +1,1 @@
-export {CartScreen} from '../CartScreen/CartScreen';
+export {CartScreen} from '@/src/screens/CartScreen/CartScreen';

@@ -1,1 +1,1 @@
-export {PaymentScreen} from '../PaymentScreen/PaymentScreen';
+export {PaymentScreen} from '@/src/screens/PaymentScreen/PaymentScreen';

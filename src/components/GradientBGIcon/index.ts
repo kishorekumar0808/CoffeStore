@@ -1,1 +1,1 @@
-export {GradientBGIcon} from '../GradientBGIcon/GradientBGIcon';
+export {GradientBGIcon} from '@/src/components/GradientBGIcon/GradientBGIcon';

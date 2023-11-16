@@ -1,1 +1,1 @@
-export {OrderHistory} from '../OrderHistory/OrderHistory';
+export {OrderHistory} from '@/src/screens/OrderHistory/OrderHistory';

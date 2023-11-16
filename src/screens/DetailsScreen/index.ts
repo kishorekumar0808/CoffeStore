@@ -1,1 +1,1 @@
-export {DetailsScreen} from '../DetailsScreen/DetailsScreen';
+export {DetailsScreen} from '@/src/screens/DetailsScreen/DetailsScreen';

@@ -1,5 +1,5 @@
+import { COLORS, SPACING } from '@/src/theme/theme';
 import {StyleSheet} from 'react-native';
-import {COLORS, SPACING} from '../../theme/theme';
 
 export const styles = StyleSheet.create({
   ImageContainer: {
