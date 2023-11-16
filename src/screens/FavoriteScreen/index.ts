@@ -1,1 +1,1 @@
-export {FavoriteScreen} from '@/src/screens/FavoriteScreen/FavoriteScreen';
+export {FavoriteScreen} from '@/screens/FavoriteScreen/FavoriteScreen';

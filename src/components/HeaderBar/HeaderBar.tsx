@@ -1,10 +1,10 @@
 import {Text, View} from 'react-native';
 import React from 'react';
-import {HeaderBarProps} from '@/src/components/HeaderBar/Type';
-import {COLORS, FONTSIZE} from '@/src/theme/theme';
-import {GradientBGIcon} from '@/src/components/GradientBGIcon';
-import {styles} from '@/src/components/HeaderBar/Style';
-import { ProfilePic } from 'src/components/ProfilePic';
+import {HeaderBarProps} from '@/components/HeaderBar/Type';
+import {COLORS, FONTSIZE} from '@/theme/theme';
+import {GradientBGIcon} from '@/components/GradientBGIcon';
+import {styles} from '@/components/HeaderBar/Style';
+import { ProfilePic } from '@/components/ProfilePic';
 
 export const HeaderBar: React.FC<HeaderBarProps> = ({title}) => {
   return (

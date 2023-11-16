@@ -1,1 +1,1 @@
-export {ProfilePic} from '@/src/components/ProfilePic/ProfilePic'
+export {ProfilePic} from '@/components/ProfilePic/ProfilePic'

@@ -1,1 +1,1 @@
-export {HeaderBar} from '@/src/components/HeaderBar/HeaderBar';
+export {HeaderBar} from '@/components/HeaderBar/HeaderBar';

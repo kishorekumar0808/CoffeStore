@@ -1,10 +1,10 @@
 import React from 'react';
 import {View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {GradientBGIconProps} from '@/src/components/GradientBGIcon/Type';
-import {styles} from '@/src/components/GradientBGIcon/Style';
-import { COLORS } from '@/src/theme/theme';
-import CustomIcon from '@/src/assets/customIcon/CustomIcon';
+import {GradientBGIconProps} from '@/components/GradientBGIcon/Type';
+import {styles} from '@/components/GradientBGIcon/Style';
+import { COLORS } from '@/theme/theme';
+import CustomIcon from '@/assets/customIcon/CustomIcon';
 
 export const GradientBGIcon: React.FC<GradientBGIconProps> = ({
   name,

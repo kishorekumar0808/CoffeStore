@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import RootNavigator from './src/navigators/RootNavigator/RootNavigator';
 import SplashScreen from 'react-native-splash-screen';
+import RootNavigator from '@/navigators/RootNavigator/RootNavigator';
 
 export default function App() {
   useEffect(() => {

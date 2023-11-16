@@ -1,1 +1,1 @@
-export {useStore} from '@/src/store/Store';
+export {useStore} from '@/store/Store';

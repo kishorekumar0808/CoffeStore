@@ -2,12 +2,12 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {StyleSheet} from 'react-native';
 import {BlurView} from '@react-native-community/blur';
-import { HomeScreen } from '@/src/screens/HomeScreen';
-import { CartScreen } from '@/src/screens/CartScreen';
-import { FavoriteScreen } from '@/src/screens/FavoriteScreen';
-import { OrderHistory } from '@/src/screens/OrderHistory';
-import CustomIcon from '@/src/assets/customIcon/CustomIcon';
-import { COLORS } from '@/src/theme/theme';
+import { HomeScreen } from '@/screens/HomeScreen';
+import { CartScreen } from '@/screens/CartScreen';
+import { FavoriteScreen } from '@/screens/FavoriteScreen';
+import { OrderHistory } from '@/screens/OrderHistory';
+import CustomIcon from '@/assets/customIcon/CustomIcon';
+import { COLORS } from '@/theme/theme';
 
 const Tab = createBottomTabNavigator();
 export const TabNavigator = () => {

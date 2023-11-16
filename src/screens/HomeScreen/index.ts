@@ -1,1 +1,1 @@
-export {HomeScreen} from '@/src/screens/HomeScreen/HomeScreen';
+export {HomeScreen} from '@/screens/HomeScreen/HomeScreen';
