@@ -1,11 +1,11 @@
-import { COLORS, SPACING } from '@/theme/theme';
+import {COLORS} from '@/theme/theme';
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   ImageContainer: {
-    height: SPACING.space_36,
-    width: SPACING.space_36,
-    borderRadius: SPACING.space_12,
+    height: 36,
+    width: 36,
+    borderRadius: 12,
     borderWidth: 2,
     borderColor: COLORS.secondaryDarkGreyHex,
     alignItems: 'center',
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   Image: {
-    height: SPACING.space_36,
-    width: SPACING.space_36,
+    height: 36,
+    width: 36,
   },
 });

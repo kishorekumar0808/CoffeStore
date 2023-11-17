@@ -3,14 +3,14 @@ import {COLORS, FONTFAMILY, FONTSIZE, SPACING} from '@/theme/theme';
 
 export const styles = StyleSheet.create({
   HeaderStyle: {
-    padding: SPACING.space_30,
+    padding: 30,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
   HeaderText: {
     fontFamily: FONTFAMILY.poppins_semibold,
-    fontSize: FONTSIZE.size_16,
+    fontSize: 16,
     color: COLORS.primaryWhiteHex,
   },
 });

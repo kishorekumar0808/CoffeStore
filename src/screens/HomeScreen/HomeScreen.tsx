@@ -1,7 +1,7 @@
 import {
+  FlatList,
   ScrollView,
   StatusBar,
-  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
@@ -9,15 +9,12 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import {HeaderBar} from '@/components/HeaderBar';
-import {
-  BORDERRADIUS,
-  COLORS,
-  FONTFAMILY,
-  FONTSIZE,
-  SPACING,
-} from '@/theme/theme';
+import {COLORS, FONTSIZE} from '@/theme/theme';
 import CustomIcon from '@/assets/customIcon/CustomIcon';
 import {useStore} from '@/store';
+import {CoffeeCard} from '@/components/CoffeeCard/CoffeeCard';
+import BeansData from '@/data/BeansData';
+import {styles} from '@/screens/HomeScreen/Style';
 
 const getCategoriesFromData = (data: any) => {
   let temp: any = {};
@@ -56,12 +53,11 @@ export const HomeScreen = () => {
   const [sortedCoffee, setSortedCoffee] = useState(
     getCoffeeList(categoryIndex.category, CoffeeList),
   );
-
-  console.log('sortedCoffee--->', sortedCoffee.length);
   return (
     <View style={styles.screenContainer}>
       <StatusBar backgroundColor={COLORS.primaryBlackHex} />
       <ScrollView
+        scrollEnabled
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.ScrollView}>
         <HeaderBar title={'Home Screen'} />
@@ -95,6 +91,7 @@ export const HomeScreen = () => {
         {/* catagories */}
         <ScrollView
           horizontal
+          scrollEnabled
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.CategoryScrollViewStyle}>
           {categories.map((data, index) => (
@@ -125,65 +122,60 @@ export const HomeScreen = () => {
             </View>
           ))}
         </ScrollView>
+
+        {/* Coffee FlatList */}
+        <FlatList
+          horizontal
+          scrollEnabled
+          showsHorizontalScrollIndicator={false}
+          data={sortedCoffee}
+          keyExtractor={item => item.id}
+          contentContainerStyle={styles.FlatListContainer}
+          renderItem={({item}) => (
+            <TouchableOpacity onPress={() => {}}>
+              <CoffeeCard
+                id={item.id}
+                index={item.index}
+                type={item.type}
+                roasted={item.roasted}
+                image={item.imagelink_square}
+                name={item.name}
+                spacial_ingredient={item.special_ingredient}
+                average_rating={item.average_rating}
+                prices={item.prices[2]}
+                buttonPressHandler={() => {}}
+              />
+            </TouchableOpacity>
+          )}
+        />
+        <Text style={styles.CoffeeBeansTitle}>Coffee Beans</Text>
+
+        {/* Beans FlatList */}
+        <FlatList
+          horizontal
+          scrollEnabled
+          showsHorizontalScrollIndicator={false}
+          data={BeansData}
+          keyExtractor={item => item.id}
+          contentContainerStyle={[styles.FlatListContainer, {marginBottom: 60}]}
+          renderItem={({item}) => (
+            <TouchableOpacity onPress={() => {}}>
+              <CoffeeCard
+                id={item.id}
+                index={item.index}
+                type={item.type}
+                roasted={item.roasted}
+                image={item.imagelink_square}
+                name={item.name}
+                spacial_ingredient={item.special_ingredient}
+                average_rating={item.average_rating}
+                prices={item.prices[2]}
+                buttonPressHandler={() => {}}
+              />
+            </TouchableOpacity>
+          )}
+        />
       </ScrollView>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  ActiveCategory: {
-    height: SPACING.space_10,
-    width: SPACING.space_10,
-    borderRadius: BORDERRADIUS.radius_10,
-    backgroundColor: COLORS.primaryOrangeHex,
-  },
-  CategoryText: {
-    fontFamily: FONTFAMILY.poppins_semibold,
-    fontSize: FONTSIZE.size_16,
-    color: COLORS.primaryLightGreyHex,
-    marginBottom: SPACING.space_4,
-  },
-  CategoryScrollViewItem: {
-    alignItems: 'center',
-  },
-  CategoryScrollViewContainer: {
-    paddingHorizontal: SPACING.space_15,
-  },
-  CategoryScrollViewStyle: {
-    paddingHorizontal: SPACING.space_20,
-    marginBottom: SPACING.space_20,
-  },
-  inputIcon: {
-    marginHorizontal: SPACING.space_20,
-  },
-  InputContainerComponent: {
-    flexDirection: 'row',
-    margin: SPACING.space_30,
-    borderRadius: BORDERRADIUS.radius_20,
-    backgroundColor: COLORS.primaryDarkGreyHex,
-    alignItems: 'center',
-  },
-
-  TextInputContainer: {
-    flex: 1,
-    height: SPACING.space_20 * 3,
-    fontFamily: FONTFAMILY.poppins_medium,
-    fontSize: FONTSIZE.size_14,
-    color: COLORS.primaryWhiteHex,
-  },
-
-  screenContainer: {
-    flex: 1,
-    backgroundColor: COLORS.primaryBlackHex,
-  },
-
-  ScrollView: {
-    flexGrow: 1, //if dont have any thing to scroll it will take the entire space
-  },
-  ScreenTitle: {
-    fontSize: 20,
-    fontFamily: FONTFAMILY.poppins_semibold,
-    color: COLORS.primaryWhiteHex,
-    paddingLeft: 30,
-  },
-});
