@@ -11,9 +11,8 @@ export const styles = StyleSheet.create({
   },
   FlatListContainer: {
     gap: 20,
-    width: 20,
     paddingHorizontal: 30,
-    flex: 1,
+    flexDirection: 'row',
   },
   ActiveCategory: {
     height: 10,

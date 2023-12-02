@@ -126,7 +126,6 @@ export const HomeScreen = () => {
         {/* Coffee FlatList */}
         <FlatList
           horizontal
-          scrollEnabled
           showsHorizontalScrollIndicator={false}
           data={sortedCoffee}
           keyExtractor={item => item.id}
@@ -148,16 +147,18 @@ export const HomeScreen = () => {
             </TouchableOpacity>
           )}
         />
-        <Text style={styles.CoffeeBeansTitle}>Coffee Beans</Text>
 
         {/* Beans FlatList */}
+        <Text style={styles.CoffeeBeansTitle}>Coffee Beans</Text>
         <FlatList
           horizontal
-          scrollEnabled
           showsHorizontalScrollIndicator={false}
           data={BeansData}
           keyExtractor={item => item.id}
-          contentContainerStyle={[styles.FlatListContainer, {marginBottom: 60}]}
+          contentContainerStyle={[
+            styles.FlatListContainer,
+            {marginBottom: 100},
+          ]}
           renderItem={({item}) => (
             <TouchableOpacity onPress={() => {}}>
               <CoffeeCard
